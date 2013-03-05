@@ -7,11 +7,11 @@ require "engine_on_rails/version"
 Gem::Specification.new do |s|
   s.name        = "engine_on_rails"
   s.version     = EngineOnRails::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of EngineOnRails."
-  s.description = "TODO: Description of EngineOnRails."
+  s.authors     = ["Eduardo Maia"]
+  s.email       = ["eduvimaia@gmail.com"]
+  s.homepage    = "http://github.com/emaiax/engine_on_rails"
+  s.summary     = "Example of creating, testing and deploying engines on Rails 3"
+  s.description = "Dummy engine for Rails 3"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
@@ -20,4 +20,5 @@ Gem::Specification.new do |s|
   # s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "rspec-rails", "~> 2.13.0"
 end
