@@ -3,6 +3,13 @@
 .sass-cache
 capybara-*.html
 .rspec
+<<<<<<< HEAD
+=======
+/test/dummy/db/*.sqlite3
+/test/dummy/log/*.log
+/test/dummy/tmp/
+/test/dummy/.sass-cache
+>>>>>>> initial import
 /.bundle
 /vendor/bundle
 /log/*
@@ -13,4 +20,8 @@ capybara-*.html
 /spec/tmp/*
 **.orig
 rerun.txt
+<<<<<<< HEAD
 pickle-email-*.html
+=======
+pickle-email-*.html
+>>>>>>> initial import
