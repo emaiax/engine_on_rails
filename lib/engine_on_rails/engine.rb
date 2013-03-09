@@ -1,3 +1,6 @@
+require 'haml'
+require 'bootstrap-sass'
+
 module EngineOnRails
   class Engine < ::Rails::Engine
     isolate_namespace EngineOnRails
