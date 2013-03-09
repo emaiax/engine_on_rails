@@ -12,5 +12,6 @@
   .field
     = f.label :content
     = f.text_area :content
-  .actions
-    = f.submit 'Save'
+  .form-actions
+    = f.submit "Salvar", :class => 'btn btn-success'
+    = link_to "Cancelar", posts_path, :class => 'btn'  

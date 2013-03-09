@@ -1,21 +1,26 @@
-%h1 Listing posts
+.page-header
+  %h2 Posts - #{@posts.count} registro(s)
+  = link_to "Novo", new_post_path, :class => "btn btn-primary"
 
-%table
-  %tr
-    %th Title
-    %th Content
-    %th
-    %th
-    %th
+- unless @posts.blank?
 
-  - @posts.each do |post|
-    %tr
-      %td= post.title
-      %td= post.content
-      %td= link_to 'Show', post
-      %td= link_to 'Edit', edit_post_path(post)
-      %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Post', new_post_path
+  %table.table.table-condensed.table-striped
+    %thead
+      %tr
+        %th Título
+        %th Conteúdo
+        %th Criado em
+        %th Atualizado em
+        %th Ações
+        
+    %tbody
+      - @posts.each do |post|
+        %tr
+          %td= post.title
+          %td= truncate(post.content, length: 50)
+          %td= l post.created_at, :format => :short
+          %td= l post.updated_at, :format => :short
+          %td
+            = link_to "Ver", post, :class => "btn btn-small"
+            = link_to "Editar", edit_post_path(post), :class => "btn btn-small"
+            = link_to "Excluir", post, method: :delete, data: { confirm: 'Term certeza?' }, :class => "btn btn-small btn-danger"
