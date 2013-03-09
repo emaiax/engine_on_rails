@@ -1,5 +1,5 @@
 EngineOnRails::Engine.routes.draw do
   root :to => "home#index"
 
-  resources :posts
+  resources :posts, except: [:show]
 end

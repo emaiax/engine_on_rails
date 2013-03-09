@@ -43,14 +43,6 @@ module EngineOnRails
       end
     end
   
-    describe "GET show" do
-      it "assigns the requested post as @post" do
-        post = Post.create! valid_attributes
-        get :show, {:id => post.to_param}, valid_session
-        assigns(:post).should eq(post)
-      end
-    end
-  
     describe "GET new" do
       it "assigns a new post as @post" do
         get :new, {}, valid_session
