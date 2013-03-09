@@ -158,7 +158,7 @@ module EngineOnRails
       it "redirects to the posts list" do
         post = Post.create! valid_attributes
         delete :destroy, {:id => post.to_param}, valid_session
-        response.should redirect_to(posts_url)
+        response.should redirect_to(posts_path)
       end
     end
   
