@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 3.2.12"
-  s.add_dependency "mysql2"
+  s.add_dependency "mysql2", "~> 0.3.12"
   s.add_dependency "haml", "~> 3.1.7"
   s.add_dependency "haml-rails", "~> 0.3.5"
   s.add_dependency "sass-rails", "~> 3.2.5"
